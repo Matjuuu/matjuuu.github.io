@@ -5,6 +5,7 @@
   width: 30%;
   margin-left: auto;
   margin-right: auto;
+  z-index: -1;
 }
 
 /*body {
@@ -368,8 +369,8 @@ z-index: 10;
 /* ------------------ gallery 2-------------- */
 
 .boxes{ 
-  width: 50vw;
-  margin: 5vw auto;
+  width: 40vw;
+  /*margin: 1vw auto;*/
   z-index: 200;
   font-size: 0;
 }
