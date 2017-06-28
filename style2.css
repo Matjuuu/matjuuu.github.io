@@ -1,42 +1,64 @@
 .main-logo {
+  padding-top: 5%;
   display: block;
-  height: 100px;
-  width: 100px;
+  height: 30%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
 
-body {
+/*body {
   font-family: Helvetica, sans-serif;
-  color: #ffffff;
+  color: #000000;
   margin: 0; 
-  background: #431333;  
+  background: #ffffff;  
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Monoton|Poiret+One|Raleway');
+
+body{
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  color: #000000;
+  font-size: 1.25vw;
+}
+body *{
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  z-index: 100;
+}
+
+aside {
+padding-top: 5%;
+padding-bottom: 10%;
 }
 
 h1 {
   text-align: center;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+  margin: 0;
 }
 h2 {
   font-size: 1.25em;
   font-weight: lighter;
   text-align: center;
   /*left: 50%;*/
-  letter-spacing: .1em;
+  letter-spacing: .05em;
 }
 
-h3, h4 {
-  font-size: 1.25em;
-  font-weight: lighter;
-  text-align: right;
-  bottom: 1px;
-  /*left: 50%;*/
-  letter-spacing: .1em;
+.menu_button {
+  float: left;
+  padding-top: 30%;
+  padding-left: 15%;
+  max-height: 10%;
+  max-width: 10%;
 }
-p {
-  text-align: center;
-  padding-top: 50px;
-}
+
 
 a {
   color: #ffffff;
@@ -47,6 +69,41 @@ a:visited {
   color: #ffffff;
   list-style: none;
   text-decoration: none;
+}
+
+ul,
+li{
+  list-style: none;
+}
+label{
+  cursor: pointer;
+}
+input{
+  display: none;
+}
+
+/* ------------footer-------------- */
+footer{
+  width: 30%;
+  margin: 5vw auto;
+  text-align: center;
+}
+footer p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1vw;
+  color: #000;
+  font-weight: normal;
+  line-height: normal;
+  text-transform: none;
+  padding: 1vw;
+}
+footer p span{
+  display: block;
+}
+footer a{
+  display: inline;
+  text-transform: uppercase;
+  border-bottom: 0.1vw solid #000;
 }
 /*h4 {
   font-size: 1.25em;
@@ -62,21 +119,22 @@ float:left;
 
 .nav__ul{
 list-style: none;
-color: #ffffff;
+color: #000000;
+z-index: 10;
 }
 
 .nav{
   position: absolute;
   overflow: hidden;
-  width: 100%;
+  width: 33%;
   height: 100%;
   margin: 0;
 }
 
 .nav__input {
-  z-index: -1000;
+  z-index: 1000;
   position: absolute;
-  left: 0;
+  left: 20%;
   top: 0;
   opacity: 0;
   pointer-events: none;
@@ -85,7 +143,7 @@ color: #ffffff;
   position: relative;
   width: 40px;
   height: 20px;
-  float: right;
+  float: left;
   margin: 2%;
   background: black;
   -webkit-transition: margin 0.4s, opacity 0.5s, width 0.4s, height 0.4s, border-radius 0.7s;
@@ -246,7 +304,7 @@ color: #ffffff;
     padding: 20px;
     font-size: 25px;
     font-family: 'Raleway', sans-serif;
-    z-index: 50;
+    z-index: -1000;
   }
   .nav__button p {
     margin: 0;
@@ -264,7 +322,7 @@ color: #ffffff;
     font-size: 30px;
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
-    z-index: 50;
+    z-index: -1000;
   }
   .nav__button p {
     margin: 0;
@@ -307,6 +365,84 @@ color: #ffffff;
   text-align: center;
 }
 
+/* ------------------ gallery 2-------------- */
+
+.boxes{ 
+  width: 50vw;
+  margin: 5vw auto;
+  z-index: 200;
+  font-size: 0;
+}
+.boxes > .box-close{
+  display: inline-block;
+  width: 22vw;
+  height: 22vw;
+  overflow: hidden; 
+}
+.boxes > .box-close img{
+  width: auto;
+  height: 100%;
+  opacity: 1;
+}
+.boxes > .box-close:hover img{
+  opacity: 0.9;
+}
+.boxes > .box-open{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;    
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
+}
+.boxes > .box-open:target{ 
+  z-index: 200; 
+  opacity: 1;
+  visibility: visible;
+}
+.boxes > .box-open > .box-background-open {
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.boxes > .box-open > .box-cross-open{
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 2vw;
+  height: 2vw;
+  background-image: url(http://panikaro.interiowo.pl/img/cross.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top right;
+  z-index: 300;
+}
+.boxes > .box-open > img{
+  top: 50%;  
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  max-width: 80%;
+  width: auto;
+  max-height: 80%;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+  -o-box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+  z-index: 200;
+}
+/* -------------------------------------------------------- end codepen */
+
 .masonry { /* Masonry container */
   -webkit-column-count: 4;
   -moz-column-count:4;
@@ -324,7 +460,7 @@ color: #ffffff;
 .item {
     display: inline-block;
     background: #ffffff;
-    padding: 0;
+    padding: 1%;
     margin: 0 0 0;
     width: 100%;
   -webkit-transition: 1s ease all;
@@ -334,8 +470,8 @@ color: #ffffff;
     /*box-shadow: 1px 1px 2px 0 #ccc;*/
 }
 
-/*.item:hover img { opacity: 0.3; }
-.item:hover img:hover { opacity: 1; }*/
+.item:hover img { opacity: 0.3; }
+.item:hover img:hover { opacity: 1; }
 
 .item img{max-width:100%;}
 
