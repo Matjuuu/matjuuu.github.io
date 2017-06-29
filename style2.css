@@ -43,8 +43,7 @@ h1 {
   padding-bottom: 7%;
 }
 
-aside {
-  font-family: Helvetica,serif;
+.site-title {
   text-align: center;
   font-size: 2.5vh;
   padding-top: 3%;
