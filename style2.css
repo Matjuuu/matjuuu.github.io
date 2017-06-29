@@ -306,20 +306,20 @@ label[for="nav-trigger"] {
         column-count: 2;
     }
 }
-@media only screen and (min-width: 969px) and (max-width: 1500px){
+@media only screen and (min-width: 969px) and (max-width: 3500px){
     .masonry {
         -moz-column-count: 3;
         -webkit-column-count: 3;
         column-count: 3;
     }
 }
-@media only screen and (min-width: 1501px) {
+/*@media only screen and (min-width: 1501px) {
     .masonry {
         -moz-column-count: 4;
         -webkit-column-count: 4;
         column-count: 4;
     }
-}
+}*/
 
 .lb {
   display: none;
