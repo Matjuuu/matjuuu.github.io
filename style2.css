@@ -228,6 +228,9 @@ label[for="nav-trigger"] {
   max-width: 100%;
   max-height: 90%;
   margin-top: 10%;
+  margin-bottom: 10%;
+
+
 }
 
 .lb:target {
