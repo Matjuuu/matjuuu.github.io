@@ -79,23 +79,23 @@ p {
   
   /* non-critical appearance styles */
   list-style: none;
-  background: #14191F;
+  background: #ffffff;
 }
 
 /* Navigation Menu - List items */
 .nav-item {
   /* non-critical appearance styles */
   width: 200px;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .nav-item a {
   /* non-critical appearance styles */
   display: block;
   padding: 1em;
-  background: #14191F;
-  color: white;
+  background: #ffffff;
+  color: #000000;
   font-size: 2em;
   font-weight: lighter;
   text-decoration: none;
@@ -141,7 +141,7 @@ label[for="nav-trigger"] {
 
 .nav-trigger:checked ~ .site-wrap {
   left: 200px;
-  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+  /*box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);*/
 }
 
 /* Micro reset */
